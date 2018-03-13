@@ -1,82 +1,34 @@
 package zad1;
 
 import java.io.IOException;
-import java.nio.ByteBuffer;
-import java.nio.CharBuffer;
-import java.nio.channels.FileChannel;
-import java.nio.charset.Charset;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
-import java.util.EnumSet;
-import java.util.function.Predicate;
-import static java.nio.file.StandardOpenOption.*;
 
 public class Futil 
 {
 	
 	static void processDir(String dirName, String outputFile)
 	{
-		Predicate<Path> isFile = Files::isRegularFile;
-		Predicate<Path> isTxt = p -> p.toString().endsWith(".txt");
-		
 		try
 		{
-			Files.walk(Paths.get(dirName))
-				 .filter(isFile.and(isTxt))
-				 .forEach(f -> { Futil.copyData(f, outputFile); });
-		}
-		catch (IOException e)
-		{
-			//System.out.println("ERROR:" + e.toString());
-		}
-	}
-	
-	static void copyData(Path fromFile, String outputFile)
-	{
-		EnumSet<StandardOpenOption> outOpts = EnumSet.of(CREATE, APPEND, WRITE);
-		FileChannel inpch = null, outch = null;
-		Charset inpcs = Charset.forName("Cp1250"),	// wejsciowa strona kodowa
-				outcs = Charset.forName("UTF-8");	// wyjsciowa strona kodowa
-		
-		try
-		{
-			inpch = FileChannel.open(fromFile, READ);
-			outch = FileChannel.open(Paths.get(outputFile), outOpts);
-
-			String sep = System.getProperty("line.separator");
-			String os = System.getProperty("os.name");
-			int sepSize = os.toLowerCase().contains("win") ? 2 : 1;
-			ByteBuffer buffer = ByteBuffer.allocate((int) inpch.size() + sepSize);
+			// Create and initialize FileVisitor object
+			MyFileVisitor visitor = new MyFileVisitor(outputFile);
+			visitor.init();
 			
-			// Przyzwoicie powinno byc:
-			// 	int n = inChannel.read(buffer);
-			// 	if (n != (int) inChannel.size()) { System.out.println("ERROR"); return; }
-			// a jest...
-			inpch.read(buffer);
-			buffer.put(sep.getBytes());
-			buffer.flip();
+			// Walk through dir and subdirs - populate list of found files
+			Files.walkFileTree(Paths.get(dirName), visitor);
 			
-			CharBuffer cb = inpcs.decode(buffer);
-			buffer = outcs.encode(cb);
-			outch.write(buffer);
+			// Save content of found files into a single file
+			visitor.copyData();
+			visitor.cleanup();
 		}
-		catch (IOException e)
+		catch (IOException ioe)
 		{
-			//System.out.println("ERROR:" + e.toString());
+			//System.out.println("ERROR: " + e.toString());
 		}
-		finally
+		catch (Exception e)
 		{
-			try
-			{
-				inpch.close();
-				outch.close();
-			}
-			catch (IOException e)
-			{
-				//System.out.println("ERROR:" + e.toString());
-			}
+			//System.out.println("Different ERROR: " + e.toString());
 		}
 	}
 	
