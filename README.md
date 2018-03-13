@@ -1,1 +1,1 @@
-Repozytorium zawiera rozwi¹zania zadañ oraz prace zrealizowane w ramach zajêæ uczêszczanych na studiach pierwszego stopnia, kierunek informatyka na Polsko-Japoñskiej Akademii Technik Komputerowych w Warszawie (PJATK).
+Repozytorium zawiera rozwiÄ…zania zadaÅ„ oraz prace zrealizowane w ramach zajÄ™Ä‡ uczÄ™szczanych na studiach pierwszego stopnia, kierunek informatyka na Polsko-JapoÅ„skiej Akademii Technik Komputerowych w Warszawie (PJATK).

@@ -1,9 +1,9 @@
-Folder zawiera rozwi¹zania zadañ zrealizowanych w ramach przedmiotu Techniki Programowania Rozproszonego (TPO) , którego prowadz¹cym by³ dr Krzysztof Barteczko.
+Folder zawiera rozwiÄ…zania zadaÅ„ zrealizowanych w ramach przedmiotu Techniki Programowania Rozproszonego (TPO) . ProwadzÄ…cy: dr Krzysztof Barteczko.
 
 
-Spis zadañ:
+Spis zadaÅ„:
 
-Zad. 1: kana³y plikowe
+Zad. 1: kanaÅ‚y plikowe
 Zad. 2: ...
 Zad. 3: ...
 Zad. 4: ...

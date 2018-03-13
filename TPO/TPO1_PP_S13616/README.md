@@ -1,19 +1,15 @@
-Treœæ zadania:
+TreÅ›Ä‡ zadania:
 
-Katalog {user.home}/TPO1dir  zawiera pliki tekstowe umieszczone w tym katalogu i jego ró¿nych podkatalogach. Kodowanie plików to Cp1250. 
-Przegl¹daj¹c rekursywnie drzewo katalogowe, zaczynaj¹ce siê od {user.home}/TPO1dir,  wczytywaæ te pliki i dopisywaæ ich zawartoœci do pliku o nazwie TPO1res.txt, znaduj¹cym siê w katalogu projektu. Kodowanie pliku TPO1res.txt winno byæ UTF-8, a po ka¿dym uruchomieniu programu plik ten powinien zawieraæ tylko aktualnie przeczytane dane z  plików katalogu/podkatalogow. 
+Katalog {user.home}/TPO1dir  zawiera pliki tekstowe umieszczone w tym katalogu i jego rÃ³Å¼nych podkatalogach. Kodowanie plikÃ³w to Cp1250.
+PrzeglÄ…dajÄ…c rekursywnie drzewo katalogowe, zaczynajÄ…ce siÄ™ od {user.home}/TPO1dir, wczytywaÄ‡ te pliki i dopisywaÄ‡ ich zawartoÅ›ci do pliku o nazwie TPO1res.txt, znadujÄ…cym siÄ™ w katalogu projektu. Kodowanie pliku TPO1res.txt winno byÄ‡ UTF-8, a po kaÅ¼dym uruchomieniu programu plik ten powinien zawieraÄ‡ tylko aktualnie przeczytane dane z  plikÃ³w katalogu/podkatalogow.
 
-Poni¿szy gotowy fragment winien wykonaæ ca³¹ robotê:
-      public class Main {
-        public static void main(String[] args) {
-          String dirName = System.getProperty("user.home")+"/TPO1dir";
-          String resultFileName = "TPO1res.txt";
-          Futil.processDir(dirName, resultFileName);
-        }
-      }
-Uwagi:
-pliku Main.java nie wolno w ¿aden sposób modyfikowaæ,
-trzeba dostarczyæ definicji klasy Futil,
-oczywiœcie, nazwa katalogu i pliku oraz ich po³o¿enie s¹ obowi¹zkowe,
-nale¿y zastosowaæ FileVisitor do przegl¹dania katalogu oraz kana³y plikowe (klasa FileChannel) do odczytu/zapisu plików (bez tego rozwi¹zanie nie uzyska punktów).
-w wynikach testów mog¹ byæ przedstawione dodatkowe zalecenia co do sposobu wykonania zadania (o ile rozwi¹zanie nie bêdzie jeszcze ich uwzglêdniaæ),.
+PoniÅ¼szy gotowy fragment winien wykonaÄ‡ caÅ‚Ä… robotÄ™:
+    public class Main {
+		public static void main(String[] args) {
+			String dirName = System.getProperty("user.home")+"/TPO1dir";
+			String resultFileName = "TPO1res.txt";
+			Futil.processDir(dirName, resultFileName);
+		}
+	}
+
+Uwagi: pliku Main.java nie wolno w Å¼aden sposÃ³b modyfikowaÄ‡, trzeba dostarczyÄ‡ definicji klasy Futil, oczywiÅ›cie, nazwa katalogu i pliku oraz ich poÅ‚oÅ¼enie sÄ… obowiÄ…zkowe, naleÅ¼y zastosowaÄ‡ FileVisitor do przeglÄ…dania katalogu oraz kanaÅ‚y plikowe (klasa FileChannel) do odczytu/zapisu plikÃ³w (bez tego rozwiÄ…zanie nie uzyska punktÃ³w). W wynikach testÃ³w mogÄ… byÄ‡ przedstawione dodatkowe zalecenia co do sposobu wykonania zadania (o ile rozwiÄ…zanie nie bÄ™dzie jeszcze ich uwzglÄ™dniaÄ‡).
