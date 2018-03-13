@@ -1,10 +1,10 @@
-Folder zawiera rozwiązania zadań zrealizowanych w ramach przedmiotu Techniki Programowania Rozproszonego (TPO) . Prowadzący: dr Krzysztof Barteczko.
+Folder zawiera rozwiązania zadań zrealizowanych w ramach przedmiotu **Techniki Programowania Rozproszonego (TPO)** . Prowadzący: dr Krzysztof Barteczko.
 
 
 Spis zadań:
 
-Zad. 1: kanały plikowe
-Zad. 2: ...
-Zad. 3: ...
-Zad. 4: ...
+Zad. 1: kanały plikowe <br />
+Zad. 2: ... <br />
+Zad. 3: ... <br />
+Zad. 4: ... <br />
 Zad. 5: ...
