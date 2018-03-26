@@ -4,7 +4,7 @@ Folder zawiera rozwiązania zadań zrealizowanych w ramach przedmiotu **Techniki
 Spis zadań:
 
 Zad. 1: kanały plikowe <br />
-Zad. 2: ... <br />
+Zad. 2: klienci usług sieciowych <br />
 Zad. 3: ... <br />
 Zad. 4: ... <br />
 Zad. 5: ...
