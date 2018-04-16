@@ -1,0 +1,1 @@
+Folder zawiera rozwiązania zadań zrealizowanych w ramach przedmiotu **Uniwersalne Techniki Programowania (UTP)** . Prowadzący: dr Krzysztof Barteczko.
