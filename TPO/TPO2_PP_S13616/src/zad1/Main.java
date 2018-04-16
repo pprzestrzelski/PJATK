@@ -6,6 +6,7 @@
 
 package zad1;
 
+import javax.swing.SwingUtilities;
 
 public class Main {
   public static void main(String[] args) {
@@ -15,5 +16,8 @@ public class Main {
     Double rate2 = s.getNBPRate();
     // ...
     // część uruchamiająca GUI
+    SwingUtilities.invokeLater(
+    		() -> new NetClientGui("Net service's client")
+    );
   }
 }
